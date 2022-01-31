@@ -1,1006 +1,982 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="format-detection" content="telephone=no" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <!--range slider-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.0.0/rangeslider.min.css"
-      integrity="sha512-0vp5NeGSXVyVhWa/BuqCPMno6cznsCS/e1qIYhfSR1yPj5bqiyVjpDsSN69DYrZa2zXjpD1dd15/MekBvhspig=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.css"
-      integrity="sha512-o3x4nST+KCWWUxaA1oneL8MOaOz8EEG+r6IUASMYlYd+ehohuxEr6Tv3XxZNkwHZgn3rw4r2D8N868O099HgyQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <title>Тестовое</title>
-  </head>
-  <body>
-    <div class="overlay"></div>
-    <!-- header -->
-    <header class="header" id="header">
-      <div class="header__wrapper">
-        <img src="img/logo.svg" alt="logo" class="logo" />
-        <nav class="nav">
-          <ul>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Оплата и доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-          <div class="nav__icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-        <button class="btn btn--header">Обратный звонок</button>
-        <div class="header__icons">
-          <a><img src="img/iconSearh.svg" alt="search" /></a>
-          <a><img src="img/iconUser.svg" alt="user" /></a>
-          <a><img src="img/iconSkils.svg" alt="stats" /><span>2</span></a>
-          <a><img src="img/favorite.svg" alt="favorite" /></a>
-          <a><img src="img/iCart.svg" alt="cart" /><span>4</span></a>
-        </div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="format-detection" content="telephone=no" />
+      <link
+         rel="stylesheet"
+         href="https://unpkg.com/swiper/swiper-bundle.min.css"
+         />
+      <!--range slider-->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.0.0/rangeslider.min.css"
+         integrity="sha512-0vp5NeGSXVyVhWa/BuqCPMno6cznsCS/e1qIYhfSR1yPj5bqiyVjpDsSN69DYrZa2zXjpD1dd15/MekBvhspig=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+         />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.css"
+         integrity="sha512-o3x4nST+KCWWUxaA1oneL8MOaOz8EEG+r6IUASMYlYd+ehohuxEr6Tv3XxZNkwHZgn3rw4r2D8N868O099HgyQ=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+         />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+         />
+      <link rel="stylesheet" href="css/style.css" />
+      <title>Тестовое</title>
+   </head>
+   <body>
+      <div class="overlay"></div>
+      <!-- header -->
+      <header class="header" id="header">
+         <div class="header__wrapper">
+            <img src="img/logo.svg" alt="logo" class="logo" />
+            <nav class="nav">
+               <ul>
+                  <li><a href="#">Каталог</a></li>
+                  <li><a href="#">Услуги</a></li>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Оплата и доставка</a></li>
+                  <li><a href="#">Контакты</a></li>
+               </ul>
+               <div class="nav__icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+            </nav>
+            <button class="btn btn--header">Обратный звонок</button>
+            <div class="header__icons">
+               <a><img src="img/iconSearh.svg" alt="search" /></a>
+               <a><img src="img/iconUser.svg" alt="user" /></a>
+               <a><img src="img/iconSkils.svg" alt="stats" /><span>2</span></a>
+               <a><img src="img/favorite.svg" alt="favorite" /></a>
+               <a><img src="img/iCart.svg" alt="cart" /><span>4</span></a>
+            </div>
+         </div>
+      </header>
+      <!-- main content -->
+      <div class="main">
+         <div class="sidebar">
+            <button class="btn--hide-filter">
+            <img src="img/close.svg" alt="close" />
+            </button>
+            <p class="bold">Выбор по параметрам:</p>
+            <span class="hr-line"></span>
+            <!--цена-->
+            <p class="bold">Цена:</p>
+            <div class="range">
+               <input type="text" class="price_range" name="my_range" value="" />
+               <div class="range-slider-inputs">
+                  <div class="range-slider-input--1">
+                     <input
+                        type="number"
+                        min="0"
+                        max="2000"
+                        class="range-slider-input"
+                        id="range_price_from"
+                        placeholder="0"
+                        />
+                     <i>₽</i>
+                  </div>
+                  <span>-</span>
+                  <div class="range-slider-input--2">
+                     <input
+                        type="number"
+                        min="0"
+                        max="2000"
+                        class="range-slider-input"
+                        id="range_price_to"
+                        />
+                     <i>₽</i>
+                  </div>
+               </div>
+            </div>
+            <span class="hr-line"></span>
+            <p class="bold">Площадь помещения:</p>
+            <div class="range">
+               <input type="text" class="area_range" name="my_range" value="" />
+               <div class="range-slider-inputs">
+                  <div class="range-slider-input--1">
+                     <input
+                        type="number"
+                        min="0"
+                        max="2000"
+                        class="range-slider-input"
+                        id="range_area_from"
+                        placeholder="0"
+                        />
+                     <i>м&#178;</i>
+                  </div>
+                  <span>-</span>
+                  <div class="range-slider-input--2">
+                     <input
+                        type="number"
+                        min="0"
+                        max="2000"
+                        class="range-slider-input"
+                        id="range_area_to"
+                        placeholder="2000"
+                        />
+                     <i>м&#178;</i>
+                  </div>
+               </div>
+            </div>
+            <span class="hr-line"></span>
+            <p class="bold">Производитель:</p>
+            <div class="radio">
+               <form class="radio__search">
+                  <input type="text" id="search-bar" placeholder="Поиск" />
+                  <a href="#"><img src="img/iconSearh.svg" /></a>
+               </form>
+               <div class="radio__options">
+                  <label class="radio__container"
+                     >ABASK (4)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="radio__container"
+                     >ALC (2)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="radio__container"
+                     >Aeronic (14)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="radio__container"
+                     >Bosh (4)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="radio__container"
+                     >ABASK (4)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="radio__container"
+                     >Bosh (4)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="radio__container"
+                     >ABASK (4)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="radio__container"
+                     >ALC (2)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="radio__container"
+                     >ABASK (4)
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+            </div>
+            <span class="hr-line"></span>
+            <p class="bold">Дополнительные опции:</p>
+            <div class="radio__options radio__options--no-scroll">
+               <label class="radio__container"
+                  >Ионизация (46)
+               <input type="checkbox" />
+               <span class="checkmark"></span>
+               </label>
+               <label class="radio__container"
+                  >Климат контроль (22)
+               <input type="checkbox" />
+               <span class="checkmark"></span>
+               </label>
+               <label class="radio__container"
+                  >Турбо (144)
+               <input type="checkbox" />
+               <span class="checkmark"></span>
+               </label>
+               <label class="radio__container"
+                  >Эко (4)
+               <input type="checkbox" />
+               <span class="checkmark"></span>
+               </label>
+               <label class="radio__container"
+                  >Wi Fi модуль (70)
+               <input type="checkbox" />
+               <span class="checkmark"></span>
+               </label>
+            </div>
+            <span class="hr-line"></span>
+            <p class="bold">Мощность охлаждения:</p>
+            <div class="range">
+               <input type="text" class="power_range" name="my_range" value="" />
+               <div class="range-slider-inputs">
+                  <div class="range-slider-input--1">
+                     <input
+                        type="number"
+                        min="0"
+                        max="2000"
+                        class="range-slider-input"
+                        id="range_power_from"
+                        placeholder="0"
+                        />
+                     <i>кВт</i>
+                  </div>
+                  <span>-</span>
+                  <div class="range-slider-input--2">
+                     <input
+                        type="number"
+                        min="0"
+                        max="2000"
+                        class="range-slider-input"
+                        id="range_power_to"
+                        />
+                     <i>кВт</i>
+                  </div>
+               </div>
+            </div>
+            <span class="hr-line"></span>
+            <p class="bold">Уровень шума:</p>
+            <div class="range">
+               <input type="text" class="noize_range" name="my_range" value="" />
+               <div class="range-slider-inputs">
+                  <div class="range-slider-input--1">
+                     <input
+                        type="number"
+                        min="0"
+                        max="2000"
+                        class="range-slider-input"
+                        id="range_noize_from"
+                        placeholder="0"
+                        />
+                     <i>dB</i>
+                  </div>
+                  <span>-</span>
+                  <div class="range-slider-input--2">
+                     <input
+                        type="number"
+                        min="0"
+                        max="2000"
+                        class="range-slider-input"
+                        id="range_noize_to"
+                        />
+                     <i>dB</i>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="content">
+            <div class="content__wrapper">
+               <div class="product-types">
+                  <a class="product-type product-type--1">
+                     <img src="img/conditioner_svg.svg" alt="conditioner" />
+                     <h2>Кондиционеры</h2>
+                  </a>
+                  <a class="product-type product-type--2">
+                     <img src="img/ventilation_svg.svg" alt="ventilation" />
+                     <h2>Системы вентиляции</h2>
+                  </a>
+               </div>
+               <div class="tags">
+                  <button class="tag">Кондиционеры</button>
+                  <button class="tag">Сплит-системы</button>
+                  <button class="tag">Сплит-системы</button>
+                  <button class="tag">Вентиляция</button>
+                  <button class="tag">Инверторные</button>
+                  <button class="tag">Дизайнерские</button>
+                  <button class="tag">С Wi Fi</button>
+                  <button class="tag">Сплит-системы</button>
+                  <button class="tag">Инверторные</button>
+                  <button class="tag">С Wi Fi</button>
+                  <button class="tag">На 2 комнаты</button>
+                  <button class="tag">На 3 комнаты</button>
+                  <button class="tag">На 4 комнаты</button>
+                  <button class="tag">На 5 комнат</button>
+                  <button class="tag">Для кухни ресторана</button>
+                  <button class="tag">Для производства</button>
+                  <button class="tag">Дизайнерские</button>
+                  <button class="tag">С Wi Fi</button>
+                  <button class="tag">Сплит-системы</button>
+               </div>
+               <div class="sort-by">
+                  <label for="sort-by">Сортировка: </label>
+                  <select name="sort-by" id="sort-by">
+                     <option value="По возрастанию цены">По возрастанию цены</option>
+                     <option value="По возрастанию цены">По возрастанию цены</option>
+                     <option value="По возрастанию цены">По возрастанию цены</option>
+                  </select>
+                  <div class="filter">
+                     <img src="img/filter.png" alt="filter" />
+                  </div>
+               </div>
+               <div class="product__cards">
+                  <div class="product__card">
+                     <img src="img/prod_1.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/prod_2.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/Frame 77.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/Frame 77.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/prod_1.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/prod_2.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/prod_1.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/prod_2.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/Frame 77.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/Frame 77.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/prod_1.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+                  <div class="product__card">
+                     <img src="img/prod_2.png" alt="product" class="product__img" />
+                     <h4>Кондиционер Ballu RC-TVS121-42</h4>
+                     <div class="features">
+                        <div class="feature">
+                           <span>Инвертор:</span> <span>Да</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность охлаждения:</span> <span>2200 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Мощность обогрева:</span> <span>2640 Вт</span>
+                        </div>
+                        <div class="feature">
+                           <span>Площадь помещения:</span> <span>до 26 м2</span>
+                        </div>
+                     </div>
+                     <div class="prices">
+                        <div class="price">
+                           <p class="discount">19420 ₽</p>
+                           <h4 class="price-current">18240 ₽</h4>
+                        </div>
+                        <p class="in-stock">Есть в наличии</p>
+                     </div>
+                     <div class="product__btns">
+                        <button class="product__cart">
+                        В корзину <img src="img/iCart.svg" alt="cart" />
+                        </button>
+                        <button class="product__stats">
+                        <img src="img/iconSkils.svg" alt="stats" />
+                        </button>
+                        <button class="product__favorite">
+                        <img src="img/favorite.svg" alt="favorite" />
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="search">
+                  <input type="text" class="input--search" />
+                  <button class="btn--search">Найти</button>
+               </div>
+               <!--преимущества-->
+               <div class="advantages">
+                  <div class="advantages__wrapper">
+                     <h2 class="main">Наши преимущества</h2>
+                     <div class="advantages__inner">
+                        <div class="advantages__list">
+                           <div class="advantage">
+                              <img
+                                 src="img/idea.svg"
+                                 alt="advantage"
+                                 class="advantage__icon"
+                                 />
+                              <p>Комплексные решения</p>
+                           </div>
+                           <div class="advantage">
+                              <img
+                                 src="img/deliverybox.svg"
+                                 alt="advantage"
+                                 class="advantage__icon"
+                                 />
+                              <p>Быстрая доставка и монтаж</p>
+                           </div>
+                           <div class="advantage">
+                              <img
+                                 src="img/consultation.svg"
+                                 alt="advantage"
+                                 class="advantage__icon"
+                                 />
+                              <p>Сервисное обслуживание</p>
+                           </div>
+                        </div>
+                        <div class="advantages__promo">
+                           <h4>
+                              Лучшие <br />
+                              серцифицированные <br />
+                              специалисты
+                           </h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--выполненные работы-->
+               <div class="works">
+                  <div class="works__wrapper">
+                     <h2 class="main">Выполненные работы</h2>
+                     <div class="swiper worksSwiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <img src="img/slider_img.png" />
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/slider_img.png" />
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/slider_img.png" />
+                           </div>
+                        </div>
+                        <div class="swiper__navigation">
+                           <div class="swiper-button-next"></div>
+                           <div class="swiper-button-prev"></div>
+                           <div class="swiper-scrollbar"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--схема работы-->
+               <div class="steps">
+                  <div class="steps__wrapper">
+                     <h2 class="main">Схема работы</h2>
+                     <div class="steps-list">
+                        <div class="step">
+                           <h4 class="step__num">1</h4>
+                           <p>Описание первого этапа</p>
+                        </div>
+                        <div class="step">
+                           <h4 class="step__num">2</h4>
+                           <p>Описание второго этапа</p>
+                        </div>
+                        <div class="step">
+                           <h4 class="step__num">3</h4>
+                           <p>Описание третьего этапа</p>
+                        </div>
+                        <div class="step">
+                           <h4 class="step__num">4</h4>
+                           <p>Описание четвертого этапа</p>
+                        </div>
+                        <div class="step">
+                           <h4 class="step__num">5</h4>
+                           <p>Описание пятого этапа</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--новости и статьи-->
+               <div class="news">
+                  <div class="news__wrapper">
+                     <h2 class="main">Новости и статьи</h2>
+                     <div class="news__cards">
+                        <div class="news__card">
+                           <img src="img/news_img1.png" alt="news image" />
+                           <h4 class="news__title">Как настроить работу кондиционера</h4>
+                           <p>
+                              Прежде всего, постоянный количественный рост и сфера нашей
+                              активности создаёт предпосылки для позиций, занимаемых
+                              участниками в отношении поставленных задач. Учитывая
+                              ключевые сценарии поведения, семантический разбор внешних
+                              противодействий требует от нас анализа первоочередных
+                              требований.
+                           </p>
+                           <a href="#" class="btn btn--news">Читать подробнее</a>
+                        </div>
+                        <div class="news__card">
+                           <img src="img/news_img2.png" alt="news image" />
+                           <h4 class="news__title">Как настроить работу кондиционера</h4>
+                           <p>
+                              Прежде всего, постоянный количественный рост и сфера нашей
+                              активности создаёт предпосылки для позиций, занимаемых
+                              участниками в отношении поставленных задач. Учитывая
+                              ключевые сценарии поведения, семантический разбор внешних
+                              противодействий требует от нас анализа первоочередных
+                              требований. Учитывая ключевые сценарии поведения
+                           </p>
+                           <a href="#" class="btn btn--news">Читать подробнее</a>
+                        </div>
+                        <div class="news__card">
+                           <img src="img/news_img3.png" alt="news image" />
+                           <h4 class="news__title">
+                              Вентиляция для промышленных помещений
+                           </h4>
+                           <p>
+                              Прежде всего, постоянный количественный рост и сфера нашей
+                              активности создаёт предпосылки для позиций, занимаемых
+                              участниками в отношении поставленных задач. Учитывая
+                              ключевые сценарии поведения, семантический разбор внешних
+                              противодействий требует от нас анализа первоочередных
+                              требований.
+                           </p>
+                           <a href="#" class="btn btn--news">Читать подробнее</a>
+                        </div>
+                        <div class="news__card">
+                           <img src="img/news_img4.png" alt="news image" />
+                           <h4 class="news__title">Новинки в мире кондиционеров</h4>
+                           <p>
+                              Прежде всего, постоянный количественный рост и сфера нашей
+                              активности создаёт предпосылки для позиций, занимаемых
+                              участниками в отношении поставленных задач.
+                           </p>
+                           <a href="#" class="btn btn--news">Читать подробнее</a>
+                        </div>
+                        <div class="news__card">
+                           <img src="img/news_img5.png" alt="news image" />
+                           <h4 class="news__title">Новость № 4</h4>
+                           <a href="#" class="btn btn--news">Читать подробнее</a>
+                        </div>
+                        <div class="news__card">
+                           <img src="img/news_img6.png" alt="news image" />
+                           <h4 class="news__title">Новость № 5</h4>
+                           <a href="#" class="btn btn--news">Читать подробнее</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--контакты-->
+               <div class="contacts">
+                  <div class="contacts__wrapper">
+                     <h2 class="main">Контакты</h2>
+                     <div class="contacts__info">
+                        <img src="img/image 20.png" alt="map" class="map" />
+                        <div class="contacts__details">
+                           <p>+7 (812) 772-62-42</p>
+                           <p>info@mistral.ru</p>
+                           <p>Санкт-Петербург, ул. Крупской, 55</p>
+                           <div class="contacts__icons">
+                              <a href="#" class="soc__icon">
+                              <img src="img/vk.svg" alt="icon"
+                                 /></a>
+                              <a href="#" class="soc__icon"
+                                 ><img src="img/fb.svg" alt="icon"
+                                 /></a>
+                              <a href="#" class="soc__icon">
+                              <img src="img/inst.svg" alt="icon"
+                                 /></a>
+                              <a href="#" class="soc__icon">
+                              <img src="img/youtube.svg" alt="icon"
+                                 /></a>
+                           </div>
+                           <button class="contact-us">Написать директору</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </header>
-    <!-- main content -->
-    <div class="main">
-      <div class="sidebar">
-        <button class="btn--hide-filter">
-          <img src="img/close.svg" alt="close" />
-        </button>
-        <p class="bold">Выбор по параметрам:</p>
-        <span class="hr-line"></span>
-        <!--цена-->
-        <p class="bold">Цена:</p>
-        <div class="range">
-          <input type="text" class="price_range" name="my_range" value="" />
-          <div class="range-slider-inputs">
-            <div class="range-slider-input--1">
-              <input
-                type="number"
-                min="0"
-                max="2000"
-                class="range-slider-input"
-                id="range_price_from"
-                placeholder="0"
-              />
-              <i>₽</i>
+      <footer class="footer">
+         <div class="footer__wrapper">
+            <p class="copyright">«Мистраль», 2022</p>
+            <div class="footer__nav">
+               <a href="#">Реквизиты компании</a>
+               <a href="#">Политика конфиденциальности</a>
+               <a href="#">Политика cookies</a>
             </div>
-            <div class="range-slider-input--2">
-              <input
-                type="number"
-                min="0"
-                max="2000"
-                class="range-slider-input"
-                id="range_price_to"
-              />
-              <i>₽</i>
-            </div>
-          </div>
-        </div>
-        <span class="hr-line"></span>
-        <p class="bold">Площадь помещения:</p>
-        <div class="range">
-          <input type="text" class="area_range" name="my_range" value="" />
-          <div class="range-slider-inputs">
-            <div class="range-slider-input--1">
-              <input
-                type="number"
-                min="0"
-                max="2000"
-                class="range-slider-input"
-                id="range_area_from"
-                placeholder="0"
-              />
-              <i>м&#178;</i>
-            </div>
-            <div class="range-slider-input--2">
-              <input
-                type="number"
-                min="0"
-                max="2000"
-                class="range-slider-input"
-                id="range_area_to"
-                placeholder="2000"
-              />
-              <i>м&#178;</i>
-            </div>
-          </div>
-        </div>
-        <span class="hr-line"></span>
-        <p class="bold">Производитель:</p>
-        <div class="radio">
-          <form class="radio__search">
-            <input type="text" id="search-bar" placeholder="Поиск" />
-            <a href="#"><img src="img/iconSearh.svg" /></a>
-          </form>
-          <div class="radio__options">
-            <label class="radio__container"
-              >ABASK (4)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="radio__container"
-              >ALC (2)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="radio__container"
-              >Aeronic (14)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="radio__container"
-              >Bosh (4)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="radio__container"
-              >ABASK (4)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="radio__container"
-              >Bosh (4)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="radio__container"
-              >ABASK (4)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="radio__container"
-              >ALC (2)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <label class="radio__container"
-              >ABASK (4)
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-          </div>
-        </div>
-        <span class="hr-line"></span>
-        <p class="bold">Дополнительные опции:</p>
-        <div class="radio__options radio__options--no-scroll">
-          <label class="radio__container"
-            >Ионизация (46)
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="radio__container"
-            >Климат контроль (22)
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="radio__container"
-            >Турбо (144)
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="radio__container"
-            >Эко (4)
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="radio__container"
-            >Wi Fi модуль (70)
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <span class="hr-line"></span>
-        <p class="bold">Мощность охлаждения:</p>
-        <div class="range">
-          <input type="text" class="power_range" name="my_range" value="" />
-          <div class="range-slider-inputs">
-            <div class="range-slider-input--1">
-              <input
-                type="number"
-                min="0"
-                max="2000"
-                class="range-slider-input"
-                id="range_power_from"
-                placeholder="0"
-              />
-              <i>кВт</i>
-            </div>
-            <div class="range-slider-input--2">
-              <input
-                type="number"
-                min="0"
-                max="2000"
-                class="range-slider-input"
-                id="range_power_to"
-              />
-              <i>кВт</i>
-            </div>
-          </div>
-        </div>
-        <span class="hr-line"></span>
-        <p class="bold">Уровень шума:</p>
-        <div class="range">
-          <input type="text" class="noize_range" name="my_range" value="" />
-          <div class="range-slider-inputs">
-            <div class="range-slider-input--1">
-              <input
-                type="number"
-                min="0"
-                max="2000"
-                class="range-slider-input"
-                id="range_noize_from"
-                placeholder="0"
-              />
-              <i>dB</i>
-            </div>
-            <div class="range-slider-input--2">
-              <input
-                type="number"
-                min="0"
-                max="2000"
-                class="range-slider-input"
-                id="range_noize_to"
-              />
-              <i>dB</i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <div class="content__wrapper">
-          <div class="product-types">
-            <a class="product-type product-type--1">
-              <img src="img/conditioner_svg.svg" alt="conditioner" />
-              <h2>Кондиционеры</h2>
-            </a>
-            <a class="product-type product-type--2">
-              <img src="img/ventilation_svg.svg" alt="ventilation" />
-              <h2>Системы вентиляции</h2>
-            </a>
-          </div>
-          <div class="tags">
-            <button class="tag">Кондиционеры</button>
-            <button class="tag">Сплит-системы</button>
-            <button class="tag">Сплит-системы</button>
-            <button class="tag">Вентиляция</button>
-            <button class="tag">Инверторные</button>
-            <button class="tag">Дизайнерские</button>
-            <button class="tag">С Wi Fi</button>
-            <button class="tag">Сплит-системы</button>
-            <button class="tag">Инверторные</button>
-            <button class="tag">С Wi Fi</button>
-            <button class="tag">На 2 комнаты</button>
-            <button class="tag">На 3 комнаты</button>
-            <button class="tag">На 4 комнаты</button>
-            <button class="tag">На 5 комнат</button>
-            <button class="tag">Для кухни ресторана</button>
-            <button class="tag">Для производства</button>
-            <button class="tag">Дизайнерские</button>
-            <button class="tag">С Wi Fi</button>
-            <button class="tag">Сплит-системы</button>
-          </div>
-          <div class="sort-by">
-            <label for="sort-by">Сортировка: </label>
-            <select name="sort-by" id="sort-by">
-              <option value="По возрастанию цены">По возрастанию цены</option>
-              <option value="По возрастанию цены">По возрастанию цены</option>
-
-              <option value="По возрастанию цены">По возрастанию цены</option>
-            </select>
-            <div class="filter">
-              <img src="img/filter.png" alt="filter" />
-            </div>
-          </div>
-          <div class="product__cards">
-            <div class="product__card">
-              <img src="img/prod_1.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/prod_2.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/Frame 77.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/Frame 77.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/prod_1.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/prod_2.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/prod_1.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/prod_2.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/Frame 77.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/Frame 77.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/prod_1.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-            <div class="product__card">
-              <img src="img/prod_2.png" alt="product" class="product__img" />
-              <h4>Кондиционер Ballu RC-TVS121-42</h4>
-              <div class="features">
-                <div class="feature">
-                  <span>Инвертор:</span> <span>Да</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность охлаждения:</span> <span>2200 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Мощность обогрева:</span> <span>2640 Вт</span>
-                </div>
-                <div class="feature">
-                  <span>Площадь помещения:</span> <span>до 26 м2</span>
-                </div>
-              </div>
-              <div class="prices">
-                <div class="price">
-                  <p class="discount">19420 ₽</p>
-                  <h4 class="price-current">18240 ₽</h4>
-                </div>
-                <p class="in-stock">Есть в наличии</p>
-              </div>
-              <div class="product__btns">
-                <button class="product__cart">
-                  В корзину <img src="img/iCart.svg" alt="cart" />
-                </button>
-                <button class="product__stats">
-                  <img src="img/iconSkils.svg" alt="stats" />
-                </button>
-                <button class="product__favorite">
-                  <img src="img/favorite.svg" alt="favorite" />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="search">
-            <input type="text" class="input--search" />
-            <button class="btn--search">Найти</button>
-          </div>
-          <!--преимущества-->
-          <div class="advantages">
-            <div class="advantages__wrapper">
-              <h2 class="main">Наши преимущества</h2>
-              <div class="advantages__inner">
-                <div class="advantages__list">
-                  <div class="advantage">
-                    <img
-                      src="img/idea.svg"
-                      alt="advantage"
-                      class="advantage__icon"
-                    />
-                    <p>Комплексные решения</p>
-                  </div>
-                  <div class="advantage">
-                    <img
-                      src="img/deliverybox.svg"
-                      alt="advantage"
-                      class="advantage__icon"
-                    />
-                    <p>Быстрая доставка и монтаж</p>
-                  </div>
-                  <div class="advantage">
-                    <img
-                      src="img/consultation.svg"
-                      alt="advantage"
-                      class="advantage__icon"
-                    />
-                    <p>Сервисное обслуживание</p>
-                  </div>
-                </div>
-                <div class="advantages__promo">
-                  <h4>
-                    Лучшие <br />
-                    серцифицированные <br />
-                    специалисты
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--выполненные работы-->
-          <div class="works">
-            <div class="works__wrapper">
-              <h2 class="main">Выполненные работы</h2>
-              <div class="swiper worksSwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="img/slider_img.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="img/slider_img.png" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="img/slider_img.png" />
-                  </div>
-                </div>
-                <div class="swiper__navigation">
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-scrollbar"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--отзывы, сертификаты-->
-          <!-- <div class="info">
-            <div class="info__reviews">
-              <h2 class="main">Отзывы</h2>
-              <img src="img/phone.png" alt="reviews" class="reviews" />
-            </div>
-            <div class="info__sertificates">
-              <h2 class="main">Сертификаты</h2>
-              <div class="info__cards">
-                <div class="info__card"></div>
-                <div class="info__card"></div>
-                <div class="info__card"></div>
-                <div class="info__card"></div>
-                <div class="info__card"></div>
-                <div class="info__card"></div>
-                <div class="info__card"></div>
-                <div class="info__card"></div>
-              </div>
-            </div>
-          </div> -->
-          <!--схема работы-->
-          <div class="steps">
-            <div class="steps__wrapper">
-              <h2 class="main">Схема работы</h2>
-              <div class="steps-list">
-                <div class="step">
-                  <h4 class="step__num">1</h4>
-                  <p>Описание первого этапа</p>
-                </div>
-                <div class="step">
-                  <h4 class="step__num">2</h4>
-                  <p>Описание второго этапа</p>
-                </div>
-                <div class="step">
-                  <h4 class="step__num">3</h4>
-                  <p>Описание третьего этапа</p>
-                </div>
-                <div class="step">
-                  <h4 class="step__num">4</h4>
-                  <p>Описание четвертого этапа</p>
-                </div>
-                <div class="step">
-                  <h4 class="step__num">5</h4>
-                  <p>Описание пятого этапа</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--новости и статьи-->
-          <div class="news">
-            <div class="news__wrapper">
-              <h2 class="main">Новости и статьи</h2>
-
-              <div class="news__cards">
-                <div class="news__card">
-                  <img src="img/news_img1.png" alt="news image" />
-                  <h4 class="news__title">Как настроить работу кондиционера</h4>
-                  <p>
-                    Прежде всего, постоянный количественный рост и сфера нашей
-                    активности создаёт предпосылки для позиций, занимаемых
-                    участниками в отношении поставленных задач. Учитывая
-                    ключевые сценарии поведения, семантический разбор внешних
-                    противодействий требует от нас анализа первоочередных
-                    требований.
-                  </p>
-                  <a href="#" class="btn btn--news">Читать подробнее</a>
-                </div>
-                <div class="news__card">
-                  <img src="img/news_img2.png" alt="news image" />
-                  <h4 class="news__title">Как настроить работу кондиционера</h4>
-                  <p>
-                    Прежде всего, постоянный количественный рост и сфера нашей
-                    активности создаёт предпосылки для позиций, занимаемых
-                    участниками в отношении поставленных задач. Учитывая
-                    ключевые сценарии поведения, семантический разбор внешних
-                    противодействий требует от нас анализа первоочередных
-                    требований. Учитывая ключевые сценарии поведения
-                  </p>
-                  <a href="#" class="btn btn--news">Читать подробнее</a>
-                </div>
-                <div class="news__card">
-                  <img src="img/news_img3.png" alt="news image" />
-                  <h4 class="news__title">
-                    Вентиляция для промышленных помещений
-                  </h4>
-                  <p>
-                    Прежде всего, постоянный количественный рост и сфера нашей
-                    активности создаёт предпосылки для позиций, занимаемых
-                    участниками в отношении поставленных задач. Учитывая
-                    ключевые сценарии поведения, семантический разбор внешних
-                    противодействий требует от нас анализа первоочередных
-                    требований.
-                  </p>
-                  <a href="#" class="btn btn--news">Читать подробнее</a>
-                </div>
-                <div class="news__card">
-                  <img src="img/news_img4.png" alt="news image" />
-                  <h4 class="news__title">Новинки в мире кондиционеров</h4>
-                  <p>
-                    Прежде всего, постоянный количественный рост и сфера нашей
-                    активности создаёт предпосылки для позиций, занимаемых
-                    участниками в отношении поставленных задач.
-                  </p>
-                  <a href="#" class="btn btn--news">Читать подробнее</a>
-                </div>
-                <div class="news__card">
-                  <img src="img/news_img5.png" alt="news image" />
-                  <h4 class="news__title">Новость № 4</h4>
-
-                  <a href="#" class="btn btn--news">Читать подробнее</a>
-                </div>
-                <div class="news__card">
-                  <img src="img/news_img6.png" alt="news image" />
-                  <h4 class="news__title">Новость № 5</h4>
-
-                  <a href="#" class="btn btn--news">Читать подробнее</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--контакты-->
-          <div class="contacts">
-            <div class="contacts__wrapper">
-              <h2 class="main">Контакты</h2>
-              <div class="contacts__info">
-                <img src="img/image 20.png" alt="map" class="map" />
-                <div class="contacts__details">
-                  <p>+7 (812) 772-62-42</p>
-                  <p>info@mistral.ru</p>
-                  <p>Санкт-Петербург, ул. Крупской, 55</p>
-                  <div class="contacts__icons">
-                    <a href="#" class="soc__icon">
-                      <img src="img/vk.svg" alt="icon"
-                    /></a>
-                    <a href="#" class="soc__icon"
-                      ><img src="img/fb.svg" alt="icon"
-                    /></a>
-                    <a href="#" class="soc__icon">
-                      <img src="img/inst.svg" alt="icon"
-                    /></a>
-                    <a href="#" class="soc__icon">
-                      <img src="img/youtube.svg" alt="icon"
-                    /></a>
-                  </div>
-                  <button class="contact-us">Написать директору</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="footer__wrapper">
-        <p class="copyright">«Мистраль», 2022</p>
-        <div class="footer__nav">
-          <a href="#">Реквизиты компании</a>
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Политика cookies</a>
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.0.0/rangeslider.min.js"
-      integrity="sha512-Lazz7w1HKIe2f7fhEqp6iNrgwCxQ2DgjKxHDzEs4Wxjzf9V0GqCydiO7c37dNmdXuplGLVcq4NnzmwvMdfbsWA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script src="main.js"></script>
-    <script>
-      $(".js-range-slider").ionRangeSlider({
-        skin: "round",
-        from: 0,
-      });
-    </script>
-  </body>
+         </div>
+      </footer>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+         ></script>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.0.0/rangeslider.min.js"
+         integrity="sha512-Lazz7w1HKIe2f7fhEqp6iNrgwCxQ2DgjKxHDzEs4Wxjzf9V0GqCydiO7c37dNmdXuplGLVcq4NnzmwvMdfbsWA=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+         ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="main.js"></script>
+      <script>
+         $(".js-range-slider").ionRangeSlider({
+           skin: "round",
+           from: 0,
+         });
+      </script>
+   </body>
 </html>
